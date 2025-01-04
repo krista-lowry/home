@@ -1,10 +1,10 @@
 
 import profile from './profile.png';
 import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
-import { } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faChartSimple } from '@fortawesome/free-solid-svg-icons';
 
 export const navigation = {
-  name: "Hashir",
+  name: "Krista Lowry",
   links: [
     {
       title: "About",
@@ -17,25 +17,18 @@ export const navigation = {
     {
       title: "Contact",
       link: "#contact",
-    },
-    {
-      title: "Links",
-      link: "/links",
-    },
-    {
-      title: "Blog",
-      link: "https://medium.com/@hashirshoaeb",
     }
   ],
 }
 export const intro = {
-  title: "Hey, I'm Hashir",
-  description: "A Computer Engineer creating mobile apps and static websites.",
+  title: "Hi, I'm Krista",
+  description: "I build and optimize digital products and marketing strategies through in-depth analysis, creative problem-solving, and efficient collaboration.",
   image: profile.src,
   buttons: [
     {
       title: "Contact Me",
       link: "#contact",
+      icon: faCode,
       isPrimary: true,
     },
     {
@@ -46,124 +39,130 @@ export const intro = {
   ],
 }
 
+
 export const about = {
-  title: "Who I am",
+  title: "Welcome to My Portfolio!",
   description: [
-    "I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering. I kick started my professional career as a mobile application developer working remotely for a UK based startup — Lessgo.",
-    "The tech industry is ever-evolving and I love being able to grow with it, while continually solidifying the fundamentals. I opensource my code from a place of empathy - for future developers, teammates, users, and with accessibility in mind. I also love joining communities, helping and mentoring new developers, and supporting organizations to promote diversity in tech. I’m sharing my programming journey on instagram, helping people who are just getting into the space of programming.",
-    "When I’m not programming, I focus on my hobbies which are: diary writing, doodling, meeting people and growing my network.",
-  ],
+    "I am a curious, driven analytics professional with 10 years experience building and optimizing digital products and marketing strategies through in-depth analysis, creative problem-solving, and efficient collaboration.",
+    "My toolkit includes SQL, Tableau, R, and a breadth of web analytics technologies from tag management to heatmap software. I am a lifelong and eager learner, continually pursuing new courses and certifications to expand my skillset."]
+  ,
+  skills: [
+    "Tableau",
+    "Power BI",
+    "SQL",
+    "R",
+    "Python",
+    "Google Analytics",
+    "A/B testing",
+    "Regex",
+    "Agile",
+    "Looker",
+    "Atlassian Suite",
+    "Google Tag Manager",
+    "User Testing",
+    "VWO",
+    "GitHub"
+  ]
 }
 
+
+
 export const work = {
-  title: "What I do",
+  title: "Projects",
+  summary: "Here you will find recent projects showcasing my technical and business acumen in data anaylsis, data visualization, strategic planning, and experiment design.",
   cards: [
     {
-      title: "Mobile App Development",
-      description: "I create pixel perfect iOS and Andriod apps using Flutter.",
-      icons: null,
+      title: "Identifying User Segments and Predicting Conversions",
+      link: "https://krista-lowry.github.io/data-analysis/",
+      description: "This project showcases my ability to perform in-depth data analysis using R code, transform findings into visualizations in Tableau, and offer data-driven recommendations to optimize marketing and CRO strategies.",
+      icons: [
+        {
+          icon: faCode,
+          link: "https://github.com/krista-lowry/data-analysis/blob/main/r-code-markdown.ipynb",
+          text: "R code"
+        },
+        {
+          icon: faChartSimple,
+          link: "https://public.tableau.com/app/profile/krista.lowry/viz/OnlineShopperIntent-TableauDash/Performance",
+          text: "Tableau"
+        },
+        {
+          icon: faGithub,
+          link: "https://krista-lowry.github.io/data-analysis/",
+          text: "GitHub"
+        },
+      ],
     },
     {
-      title: "Web Development",
-      description: "I create responsive static websites using Reactjs.",
-      icons: null,
+      title: "Funnel Conversion Rate Optimization and A/B testing",
+      description: "In this case study, I leveraged data-driven optimization techniques to improve our product's performance. Through comprehensive funnel analysis, I identified conversion bottlenecks and developed hypotheses for improvement.",
+      icons: [
+        {
+          icon: faGithub,
+          link: "https://krista-lowry.github.io/funnel-cro/",
+          text: "GitHub"
+        },
+      ],
     }
   ],
 }
 
-export const projects = {
-  title: "Projects",
-  cards: [
-    {
-      title: "StarBook",
-      description: "A digital diary and mood tracking app that helps you in keeping track of your mood and productivity throughout the month/year.",
-      icons: [
-        {
-          icon: faAppStore,
-          link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
-        },
-        {
-          icon: faGithub,
-          link: "https://github.com/hashirshoaeb/star_book",
-        },
-      ]
-    },
-    {
-      title: "QuranTalk",
-      description: "An emotional well being and mental health app. The app helps people to navigate their emotions in the light of the Quran.",
-      icons: [
-        {
-          icon: faAppStore,
-          link: "https://apps.apple.com/us/app/qurantalk/id1563425149",
-        },
-        {
-          icon: faGooglePlay,
-          link: "https://play.google.com/store/apps/details?id=com.ayahemotion.quran_talk",
-        },
-      ]
-    },
-    {
-      title: "Portfolio",
-      description: "A portfolio website template that helps you showcase your work, projects and skills as a software developer or freelancer.",
-      icons: [
-        {
-          icon: faGithub,
-          link: "https://github.com/hashirshoaeb/portfolio",
-        },
-      ]
-    },
-  ],
-}
+// export const projects = {
+//   cards: [
+//     {
+//       icons: [
+//         {
+//           icon: faAppStore,
+//           link: "https://apps.apple.com/us/app/starbook-journal-ai-diary/id1552418289",
+//         },
+//         {
+//           icon: faGithub,
+//           link: "https://github.com/hashirshoaeb/star_book",
+//         },
+//       ]
+//     },
+//   ],
+// }
 
-export const contact = {
-  title: "Get in touch",
-  description: "Coffee Chat! Please do not hesitate to schedule a meeting. Alternatively, feel free to reach out directly by email at hashirshoaeb@gmail.com.",
-  buttons: [
-    {
-      title: "Email Me",
-      link: "mailto:hashirshoaeb@gmail.com",
-      isPrimary: true,
-    },
-    {
-      title: "Schedule Meeting",
-      link: "https://topmate.io/hashirshoaeb",
-      isPrimary: false,
-    },
-  ]
-}
+
 
 // SEARCH ENGINE 
 export const SEO = {
   // 50 - 60 char  
-  title: "Hashir Shoaib | Computer Engineer | Flutter | Reactjs developer",
-  description: "I create mobile apps and static websites. I graduated from National University of Sciences and Technology (NUST) in 2020 with a degree in Computer Engineering.",
+  title: "Krista Lowry | Marketing Data Analyst | Optimization Specialist",
+  description: "I build and optimize digital products and marketing strategies through in-depth analysis, creative problem-solving, and efficient collaboration.",
   image: profile.src,
 }
 
-export const links = {
-  image: profile.src,
-  title: "@hashirshoaeb",
-  description: "Computer Engineer | Flutter | Reactjs Developer",
-  cards: [
-    {
-      title: "My website",
-      link: "https://hashirshoaeb.com/",
-    },
-    {
-      title: "QuranTalk App",
-      link: "https://www.qurantalk.app/",
-    },
-    {
-      title: "StarBook App",
-      link: "https://starbook.dev/",
-    },
-    {
-      title: "My GitHub",
-      link: "https://github.com/hashirshoaeb/",
-    },
-    {
-      title: "My LinkedIn",
-      link: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-  ]
-}
+// export const projects = {
+//   image: profile.src,
+//   title: "@hashirshoaeb",
+//   description: "Computer Engineer | Flutter | Reactjs Developer",
+//   cards: [
+//     {
+//       title: "My website",
+//       link: "https://hashirshoaeb.com/",
+//       icons: [
+//         {
+//           icon: faGithub,
+//           link: "https://github.com/hashirshoaeb/star_book",
+//         }]
+//     },
+//     {
+//       title: "QuranTalk App",
+//       link: "https://www.qurantalk.app/",
+//     },
+//     {
+//       title: "StarBook App",
+//       link: "https://starbook.dev/",
+//     },
+//     {
+//       title: "My GitHub",
+//       link: "https://github.com/hashirshoaeb/",
+//     },
+//     {
+//       title: "My LinkedIn",
+//       link: "https://www.linkedin.com/in/hashirshoaeb/",
+//     },
+//   ]
+// }

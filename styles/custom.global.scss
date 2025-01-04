@@ -18,12 +18,13 @@
 // $inverted-font: #FFFFFF;
 
 // bootstrap overrides 
-$primary: #365B6D;
+$primary: #1D67CD;
 $secondary: #F7F7F7;
 $light: #FFFFFF;
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
-$font-family-sans-serif: -apple-system, 'Barlow', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+$font-family: "Inter", serif;
+$font-optical-sizing: auto;
 
 $card-border-radius: 15px;
 
@@ -116,6 +117,10 @@ html {
   scroll-behavior: smooth;
 }
 
+// div.px-sm-1 {
+//   margin-right: 400px
+// }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -124,6 +129,12 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.tag-cloud {
+  background-color: #e9ecef;
+  color: #495057;
+  font-weight: lighter;
 }
 
 .icon-style {

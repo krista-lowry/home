@@ -1,5 +1,10 @@
 import React from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 
 export const Contact = ({ title, description, buttons }) => {
 	return (
@@ -32,18 +37,27 @@ export const Contact = ({ title, description, buttons }) => {
 
 export const Footer = () => {
 	return (
-		<footer className="bg-secondary text-center py-2 px-5">
-			<div className="container text-muted">
-				<small>&copy; 2021 {" "}
-					<Link href="https://github.com/hashirshoaeb">
-						<a>hashirshoaeb</a>
-					</Link>
-					. Open sourced with love under {" "}
-					<Link href="https://github.com/hashirshoaeb/portfolio/blob/main/LICENSE">
-						<a>MIT</a>
-					</Link>
-					{" "} License
-				</small>
+		<footer className="bg-dark text-white py-4">
+			<div className="container d-flex justify-content-between align-items-center">
+				{/* Text block with your name */}
+				<div className="text-muted">
+					<small>&copy; 2024 {" "}
+						Krista Lowry
+					</small>
+				</div>
+
+				{/* Social media icons aligned to the right */}
+				<section className="mb-0">
+					<a href="#" className="text-white mx-3" role="button">
+						<FontAwesomeIcon icon={faEnvelope} size="2x" />
+					</a>
+					<a href="#" className="text-white mx-3" role="button">
+						<FontAwesomeIcon icon={faLinkedin} size="2x" />
+					</a>
+					<a href="#" className="text-white mx-3" role="button">
+						<FontAwesomeIcon icon={faGithub} size="2x" />
+					</a>
+				</section>
 			</div>
 		</footer>
 	);
