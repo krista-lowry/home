@@ -8,7 +8,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const parse = require('html-react-parser').default;
 const { publicRuntimeConfig } = getConfig()
 
-export const Intro = ({ title, description, image, buttons, icons, jobTitle }) => {
+export const Intro = ({ title, description, options, image, buttons, icons, jobTitle }) => {
 	return (
 		<div className="bg-secondary py-5 px-5">
 			<div className="container">
@@ -24,7 +24,11 @@ export const Intro = ({ title, description, image, buttons, icons, jobTitle }) =
 					<div className="col-sm-6 text-center">
 
 						<h1 className="text-primary fw-bold display-3">{title}</h1>
-						<p> {description}</p>
+						<p> {typeof description === 'string' && description.length > 0 ? (
+							parse(description, options) // Directly parse the entire content
+						) : (
+							<p>No content available.</p>
+						)}</p>
 						{jobTitle.length > 0 ? (
 							<p className="text-uppercase">
 								<small className="text-muted">

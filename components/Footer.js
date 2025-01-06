@@ -48,13 +48,10 @@ export const Footer = () => {
 
 				{/* Social media icons aligned to the right */}
 				<section className="mb-0">
-					<a href="#" className="text-white mx-3" role="button">
-						<FontAwesomeIcon icon={faEnvelope} size="2x" />
-					</a>
-					<a href="#" className="text-white mx-3" role="button">
+					<a href="https://www.linkedin.com/in/krista-lowry/" className="text-white mx-3" role="button">
 						<FontAwesomeIcon icon={faLinkedin} size="2x" />
 					</a>
-					<a href="#" className="text-white mx-3" role="button">
+					<a href="https://github.com/krista-lowry/portfolio" className="text-white mx-3" role="button">
 						<FontAwesomeIcon icon={faGithub} size="2x" />
 					</a>
 				</section>

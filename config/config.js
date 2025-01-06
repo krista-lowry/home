@@ -30,7 +30,7 @@ export const intro = {
   buttons: [
     {
       title: "Contact me on LinkedIn",
-      link: "/portfolio-homepage",
+      link: "https://www.linkedin.com/in/krista-lowry/",
       icon: faLinkedin,
       isPrimary: false,
     },
@@ -208,7 +208,7 @@ export const work = {
   cards: [
     {
       title: "Identifying User Segments and Predicting Conversions",
-      titleLink: "/project-predict-uw",
+      // titleLink: "/project-predict-uw",
       description: "This project showcases my ability to perform in-depth data analysis using R code, transform findings into visualizations in Tableau, and offer data-driven recommendations to optimize marketing and CRO strategies.",
       icons: [
         {
@@ -231,7 +231,7 @@ export const work = {
     {
       title: "Funnel Conversion Rate Optimization and A/B testing",
       description: "In this case study, I leveraged data-driven optimization techniques to improve our product's performance. Through comprehensive funnel analysis, I identified conversion bottlenecks and developed hypotheses for improvement.",
-      titleLink: "/project-funnel-cro",
+      // titleLink: "/project-funnel-cro",
       icons: [
         {
           icon: faGithub,
