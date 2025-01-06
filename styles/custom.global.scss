@@ -20,7 +20,7 @@
 // bootstrap overrides 
 $primary: #1D67CD;
 $secondary: #F7F7F7;
-$light: #FFFFFF;
+$light: #A3A3A3;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 $font-family: "Inter", serif;
@@ -28,7 +28,10 @@ $font-optical-sizing: auto;
 
 $card-border-radius: 15px;
 
-
+$badge-font-size: .75em;
+$badge-padding-y: .35em;
+$badge-padding-x: .65em;
+$badge-margin-right: 1em;
 
 // font 
 // Title
@@ -117,6 +120,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.small-middle-container {
+  margin: auto;
+  width: 40%;
+}
+
 // div.px-sm-1 {
 //   margin-right: 400px
 // }
@@ -131,10 +139,15 @@ a {
   text-decoration: none;
 }
 
+.article-byline {
+  font-size: small;
+}
+
 .tag-cloud {
   background-color: #e9ecef;
   color: #495057;
   font-weight: lighter;
+  font-size: small;
 }
 
 .icon-style {

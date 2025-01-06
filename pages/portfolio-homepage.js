@@ -28,17 +28,6 @@ export default function Home() {
         title={navigation.name}
         links={navigation.links}
       />
-      <Intro
-        title={intro.title}
-        description={intro.description}
-        image={intro.image}
-        buttons={intro.buttons}
-      />
-      <About
-        title={about.title}
-        description={about.description}
-        skills={about.skills}
-      />
       <Work
         title={work.title}
         summary={work.summary}

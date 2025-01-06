@@ -2,6 +2,8 @@ import React from 'react';
 import getConfig from 'next/config'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const { publicRuntimeConfig } = getConfig()
 
@@ -21,7 +23,18 @@ export const Intro = ({ title, description, image, buttons, icons }) => {
 					<div className="col-sm-6 text-center">
 						<h1 className="text-primary fw-bold display-3">{title}</h1>
 						<p>{description}</p>
-						<div className="text-center">
+						<section className="mb-0">
+							<a href="#" className="text-dark mx-3" role="button">
+								<FontAwesomeIcon icon={faEnvelope} size="2x" />
+							</a>
+							<a href="#" className="text-dark mx-3" role="button">
+								<FontAwesomeIcon icon={faLinkedin} size="2x" />
+							</a>
+							<a href="#" className="text-dark mx-3" role="button">
+								<FontAwesomeIcon icon={faGithub} size="2x" />
+							</a>
+						</section>
+						<div className="text-center mt-4">
 							{buttons.map((value, index) => (
 								(value.isPrimary) ?
 									<Link key={index} href={value.link}>

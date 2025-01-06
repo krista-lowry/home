@@ -1,5 +1,7 @@
 
 import profile from './profile.png';
+import conversion from './conversion.png';
+import dash from './dash.png';
 import { faAppStore, faGithub, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 import { faCode, faChartSimple } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,7 +14,7 @@ export const navigation = {
     },
     {
       title: "Projects",
-      link: "#projects",
+      link: "/portfolio-homepage",
     },
     {
       title: "Contact",
@@ -26,15 +28,10 @@ export const intro = {
   image: profile.src,
   buttons: [
     {
-      title: "Contact Me",
-      link: "#contact",
+      title: "My Projects",
+      link: "/portfolio-homepage",
       icon: faCode,
       isPrimary: true,
-    },
-    {
-      title: "Resume",
-      link: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
-      isPrimary: false,
     },
   ],
 }
@@ -65,7 +62,22 @@ export const about = {
   ]
 }
 
-
+export const projectspage = {
+  title: "title for page",
+  subhead: "subheader content",
+  content: "content etc",
+  image: conversion.src,
+  image2: dash.src,
+  skillsused: [
+    "Tableau",
+    "R code",
+    "Logistic Regression",
+    "Bagged Decision Tree",
+    "Knn"
+  ],
+  context: "course",
+  lead: "This project showcases my ability to perform in-depth data analysis using R code, transform findings into visualizations in Tableau, and offer data-driven recommendations to optimize marketing and CRO strategies.",
+}
 
 export const work = {
   title: "Projects",
