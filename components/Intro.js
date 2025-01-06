@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+const parse = require('html-react-parser').default;
 const { publicRuntimeConfig } = getConfig()
-
 
 export const Intro = ({ title, description, image, buttons, icons }) => {
 	return (
@@ -20,9 +20,11 @@ export const Intro = ({ title, description, image, buttons, icons }) => {
 							alt="profile of krista lowry"
 						/>
 					</div>
+
 					<div className="col-sm-6 text-center">
+
 						<h1 className="text-primary fw-bold display-3">{title}</h1>
-						<p>{description}</p>
+						<p> {description}</p>
 						<section className="mb-0">
 							<a href="#" className="text-dark mx-3" role="button">
 								<FontAwesomeIcon icon={faEnvelope} size="2x" />

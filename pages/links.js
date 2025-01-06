@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import getConfig from 'next/config'
 import Link from 'next/link';
 import { Footer } from '../components/Footer';
-import { links, SEO, } from '../config/config';
+import { links, SEO, } from '../config/config.js';
 import { Header } from '../components/Header';
 
 const { publicRuntimeConfig } = getConfig()

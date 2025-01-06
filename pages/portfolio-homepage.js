@@ -3,7 +3,7 @@ import { Nav } from '../components/Navbar';
 import { Intro, About } from '../components/Intro';
 import { Skills, Projects, Work } from '../components/Work';
 import { Footer, Contact } from '../components/Footer';
-import { about, contact, intro, navigation, projects, SEO, icons, work, skills } from '../config/config';
+import { about, contact, intro, navigation, projects, SEO, icons, work, skills } from '../config/config.js';
 import { Header } from '../components/Header';
 
 // const express = require('express');

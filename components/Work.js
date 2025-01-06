@@ -3,43 +3,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link'
 import { faAppStore, faGithub, faGooglePlay, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-export const Skills = ({ title, cards }) => {
-	return (
-		<div id="skills" className="bg-secondary py-5 px-5">
-			<div className="container">
-				<h1 className="text-primary fw-bold">{title}</h1>
-				<div className="d-flex flex-row flex-wrap justify-content-center">
-					{cards.map((value, index) => (
-						<Card
-							key={index}
-							title={value.title}
-							description={value.description}
-							link={value.link} />
-					))}
-				</div>
-			</div>
-		</div>
-	);
-}
-export const Projects = ({ cards }) => {
-	return (
-		<div id="projects" className="bg-primary py-5 px-5">
-			<div className="container">
-				<div className="d-flex flex-row flex-wrap justify-content-center">
-					{cards.map((value, index) => (
-						<Card
-							key={index}
-							icons={value.icons} />
-					))}
-				</div>
-				{/* <div className="text-center">
-					<button type="button" className="btn btn-outline-light">See More</button>
-				</div> */}
-			</div>
-		</div>
-	);
-}
-export const Work = ({ title, summary, cards }) => {
+// export const Skills = ({ title, cards }) => {
+// 	return (
+// 		<div id="skills" className="bg-secondary py-5 px-5">
+// 			<div className="container">
+// 				<h1 className="text-primary fw-bold">{title}</h1>
+// 				<div className="d-flex flex-row flex-wrap justify-content-center">
+// 					{cards.map((value, index) => (
+// 						<Card
+// 							key={index}
+// 							title={value.title}
+// 							description={value.description}
+// 							link={value.link} />
+// 					))}
+// 				</div>
+// 			</div>
+// 		</div>
+// 	);
+// }
+// export const Projects = ({ link, cards }) => {
+// 	return (
+// 		<div id="projects" className="bg-primary py-5 px-5">
+// 			<div className="container">
+// 				<div className="d-flex flex-row flex-wrap justify-content-center">
+// 					<a href={value.link}>
+// 						{cards.map((value, index) => (
+// 							<Card
+// 								key={index}
+// 								icons={value.icons}/>
+// 						))}</a>
+// 				</div>
+// 				{/* <div className="text-center">
+// 					<button type="button" className="btn btn-outline-light">See More</button>
+// 				</div> */}
+// 			</div>
+// 		</div>
+// 	);
+// }
+export const Work = ({ title, summary, cards, icons }) => {
 	return (
 		<div id="work" className="bg-secondary py-5 px-5">
 			<div className="container mr-5">
@@ -53,46 +54,51 @@ export const Work = ({ title, summary, cards }) => {
 						key={index}
 						title={value.title}
 						description={value.description}
-						icons={value.icons} />
+						icons={value.icons}
+						titleLink={value.titleLink}
+						link={value.link} />
 				))}
 			</div>
 			{/* <div className="text-center">
 					<button type="button" className="btn btn-outline-light">See More</button>
 				</div> */}
 			{/* </div> */}
-		</div>
+		</div >
 	);
 }
 
-
-// export const Card = ({ title, description, icons }) => {
-// 	return (
-// 		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{ width: "20rem" }}>
-// 			<h4 className="text-primary">{title}</h4>
-// 			<p className="text-dark">{description}</p>
-// 			<div className="text-end">
-// 				{icons && icons.map((value, index) => (
-// 					<Link key={index} href={value.link}>
-// 						<a target="_blank" rel="noreferrer">
-// 							<FontAwesomeIcon className="icon-style mx-1" icon={value.icon} size="2x" />
-// 						</a>
-// 					</Link>
-// 				))}
-// 			</div>
-// 		</div>
-// 	);
-// }
+{/* 
+export const Card = ({ title, description, icons }) => {
+	return (
+		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{ width: "20rem" }}>
+			<h4 className="text-primary">{title}</h4>
+			<p className="text-dark">{description}</p>
+			<div className="text-end">
+				{icons && icons.map((value, index) => (
+					<Link key={index} href={value.link}>
+						<a target="_blank" rel="noreferrer">
+							<FontAwesomeIcon className="icon-style mx-1" icon={value.icon} size="2x" />
+						</a>
+					</Link>
+				))}
+			</div>
+		</div>
+	);
+} */}
 
 const icons = [
 	{ icon: faGithub, link: "https://github.com", text: "GitHub" },
 	{ icon: faLinkedin, link: "https://linkedin.com", text: "LinkedIn" }
 ];
-export const Card = ({ title, description, icons, buttonLabel, onButtonClick }) => {
+export const Card = ({ title, description, icons, buttonLabel, onButtonClick, titleLink }) => {
 	return (
 		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{ width: "20rem" }}>
-			<h4 className="text-primary">{title}</h4>
+			<h4 className="text-primary">
+				<a className="text-primary" href={titleLink} style={{ textDecoration: 'none' }}>
+					{title}
+				</a>
+			</h4>
 			<p className="text-dark">{description}</p>
-
 			{/* Icons Section */}
 			<div className="d-flex justify-content-around">
 				{icons &&
