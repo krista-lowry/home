@@ -6,9 +6,8 @@
   "license": "MIT",
   "private": true,
   "author": {
-    "name": "Hashir Shoaib",
-    "email": "hashirshoaeb@gmail.com",
-    "url": "https://github.com/hashirshoaeb"
+    "name": "Krista Lowry",
+    "url": "https://github.com/krista-lowry"
   },
   "scripts": {
     "prebuild": "node scripts/favicons.js",
@@ -17,8 +16,8 @@
     "start": "next start",
     "export": "next export",
     "predeploy": "npm run build && npm run export && touch ./out/.nojekyll",
-    "deploy": "npm run custom-domain && node scripts/pages.js hashirshoaeb master",
-    "custom-domain": "node scripts/cname.js hashirshoaeb.com www.hashirshoaeb.com",
+    "deploy": "npm run build && gh-pages -d scripts/pages.js",
+    "custom-domain": "node scripts/cname.js krista-lowry.com www.krista-lowry.com",
     "lint": "next lint"
   },
   "dependencies": {

@@ -57,11 +57,12 @@ export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused 
 	return (
 		<div className="small-middle-container mt-5">
 			<div className="text-left mb-3">
-				<a href="/portfolio-homepage" className="text-dark mx-3" role="button">
-					<button type="button" className="btn btn-outline-light text-light">
-						<FontAwesomeIcon icon={faArrowLeft} size="1x" />
-						All projects
-					</button>	</a>
+				<Link href="/portfolio-homepage" className="text-dark mx-3" role="button">
+					<div>
+						<button type="button" className="btn btn-outline-light text-light">
+							<FontAwesomeIcon icon={faArrowLeft} size="1x" />
+							All projects
+						</button>	</div></Link>
 			</div>
 			<h1 className="mb-4">{title}</h1>
 			<dl className="row article-byline">
@@ -83,57 +84,40 @@ export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused 
 			</p>
 			<hr />
 			<div className="mb-5">
-				{/* <ReactMarkdown>{content}</ReactMarkdown> */}
-				{/* <ReactMarkdown 
-                components={{
-                    // Custom rendering for links
-                    a: ({node, ...props}) => <a {...props} style={{ color: 'blue' }} />,
-                }}
-            >
-                {projectspage2.content}
-            </ReactMarkdown> */}
 				{typeof content === 'string' && content.length > 0 ? (
-					parse(content, options) // Directly parse the entire content
+					<>{parse(content, options)}</> // Wrap in Fragment if parse returns multiple elements
 				) : (
 					<p>No content available.</p>
 				)}
-				{/* {typeof content === 'string' && content.length > 0 ? (
-					content.split('\n').map((value, index) => (
-						value.trim() ? ( // Only render non-empty paragraphs
-							<p key={index}>{parse(value, options)}</p> // Parse HTML if present
-						) : null
-					))
-				) : (
-					<p>No content available.</p>
-				)} */}
-			</div ></div>
+			</div></div>
 
 	);
 }
-export const Work = ({ title, summary, cards }) => {
-	return (
-		<div id="work" className="bg-secondary py-5 px-5">
-			<div className="container mr-5">
-				<h1 className="text-primary fw-bold">{title}</h1>
-				{/* Description Section */}
-				<p className="lead text-dark mr-150">{summary}</p>
-			</div>
-			<div className="d-flex flex-row flex-wrap justify-content-center">
-				{cards.map((value, index) => (
-					<Card
-						key={index}
-						title={value.title}
-						description={value.description}
-						icons={value.icons} />
-				))}
-			</div>
-			{/* <div className="text-center">
-					<button type="button" className="btn btn-outline-light">See More</button>
-				</div> */}
-			{/* </div> */}
-		</div>
-	);
-}
+
+// export const Work = ({ title, summary, cards }) => {
+// 	return (
+// 		<div id="work" className="bg-secondary py-5 px-5">
+// 			<div className="container mr-5">
+// 				<h1 className="text-primary fw-bold">{title}</h1>
+// 				{/* Description Section */}
+// 				<p className="lead text-dark mr-150">{summary}</p>
+// 			</div>
+// 			<div className="d-flex flex-row flex-wrap justify-content-center">
+// 				{cards.map((value, index) => (
+// 					<Card
+// 						key={index}
+// 						title={value.title}
+// 						description={value.description}
+// 						icons={value.icons} />
+// 				))}
+// 			</div>
+// 			{/* <div className="text-center">
+// 					<button type="button" className="btn btn-outline-light">See More</button>
+// 				</div> */}
+// 			{/* </div> */}
+// 		</div>
+// 	);
+// }
 
 
 // export const Card = ({title, description, icons}) => {
@@ -169,10 +153,11 @@ export const Card = ({ title, description, icons, buttonLabel, onButtonClick }) 
 				{icons &&
 					icons.map((value, index) => (
 						<Link key={index} href={value.link}>
-							<a target="_blank" rel="noreferrer" className="text-center">
-								<FontAwesomeIcon className="icon-style" icon={value.icon} size="2x" />
-								<div className="mt-1 small">{value.text}</div>
-							</a>
+							<div>
+								<a target="_blank" rel="noreferrer" className="text-center">
+									<FontAwesomeIcon className="icon-style" icon={value.icon} size="2x" />
+									<div className="mt-1 small">{value.text}</div>
+								</a></div>
 						</Link>
 					))}
 			</div>
