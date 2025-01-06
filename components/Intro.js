@@ -8,7 +8,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const parse = require('html-react-parser').default;
 const { publicRuntimeConfig } = getConfig()
 
-export const Intro = ({ title, description, image, buttons, icons }) => {
+export const Intro = ({ title, description, image, buttons, icons, jobTitle }) => {
 	return (
 		<div className="bg-secondary py-5 px-5">
 			<div className="container">
@@ -25,7 +25,25 @@ export const Intro = ({ title, description, image, buttons, icons }) => {
 
 						<h1 className="text-primary fw-bold display-3">{title}</h1>
 						<p> {description}</p>
-						<section className="mb-0">
+						{jobTitle.length > 0 ? (
+							<p className="text-uppercase">
+								<small className="text-muted">
+									<ul className="list-inline">
+										{jobTitle.map((value, index) => (
+											<li key={index} className="list-inline-item position-relative">
+												{value}
+												{/* Add vertical line after each item except the last one */}
+												{index < jobTitle.length - 1 && (
+													<span>&nbsp; |</span>)}
+											</li>
+										))}
+									</ul>
+								</small>
+							</p>
+						) : (
+							<p>No job titles available.</p>
+						)}
+						{/* <section className="mb-0">
 							<a href="#" className="text-dark mx-3" role="button">
 								<FontAwesomeIcon icon={faEnvelope} size="2x" />
 							</a>
@@ -35,23 +53,21 @@ export const Intro = ({ title, description, image, buttons, icons }) => {
 							<a href="#" className="text-dark mx-3" role="button">
 								<FontAwesomeIcon icon={faGithub} size="2x" />
 							</a>
-						</section>
+						</section> */}
 						<div className="text-center mt-4">
 							{buttons.map((value, index) => (
-								(value.isPrimary) ?
-									<Link key={index} href={value.link}>
-										<a className="btn btn-primary my-1 mx-3">{value.title}</a>
-									</Link>
-									:
-									<Link key={index} href={value.link}>
-										<a target="_blank" rel="noreferrer" className="btn btn-outline-primary my-1 mx-3">{value.title}</a>
-									</Link>
+								<Link key={index} href={value.link} passHref>
+									<a className={value.isPrimary ? "btn btn-primary my-1 mx-3" : "btn btn-outline-primary my-1 mx-3"} target={value.isPrimary ? undefined : "_blank"} rel={value.isPrimary ? undefined : "noreferrer"}>
+										<FontAwesomeIcon icon={value.icon} className="me-2" />
+										{value.title}
+									</a>
+								</Link>
 							))}
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div >
 	);
 }
 

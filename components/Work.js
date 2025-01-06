@@ -40,6 +40,33 @@ import { faAppStore, faGithub, faGooglePlay, faLinkedin } from '@fortawesome/fre
 // 		</div>
 // 	);
 // }
+export const Certificates = ({ title, summary, cards, icons }) => {
+	return (
+		<div id="work" className="bg-white py-5 px-5">
+			<div className="container mr-5">
+				<h1 className="text-primary fw-bold">{title}</h1>
+				{/* Description Section */}
+				<p className="lead text-dark mr-150">{summary}</p>
+			</div>
+			<div className="d-flex flex-row flex-wrap justify-content-center">
+				{cards.map((value, index) => (
+					<Card
+						key={index}
+						title={value.title}
+						description={value.description}
+						icons={value.icons}
+						titleLink={value.titleLink}
+						link={value.link} />
+				))}
+			</div>
+			{/* <div className="text-center">
+					<button type="button" className="btn btn-outline-light">See More</button>
+				</div> */}
+			{/* </div> */}
+		</div >
+	);
+}
+
 export const Work = ({ title, summary, cards, icons }) => {
 	return (
 		<div id="work" className="bg-secondary py-5 px-5">

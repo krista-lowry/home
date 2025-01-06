@@ -23,6 +23,7 @@ export default function Home() {
         // image2={projectspage.image2}
         skillsused={projectspage2.skillsused}
         context={projectspage2.context}
+        teams={projectspage2.teams}
       />
       <Footer />
     </Fragment>

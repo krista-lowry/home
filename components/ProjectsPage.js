@@ -2,8 +2,7 @@ import React from 'react';
 import getConfig from 'next/config'
 import Link from 'next/link'
 import Image from 'next/image';
-import conversion from '../public/conversion.png';
-import dash from '../config/dash.png';
+import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faArrowLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
@@ -21,25 +20,36 @@ export const BreadCrumb = ({ text, link }) => {
 	);
 }
 
-export const ProjectsPage = ({ title, subhead, content, image, image2, lead, skillsused = [], context }) => {
+export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused = [], context }) => {
 	const options = {
 		replace: (domNode) => {
+			if (domNode.attribs && domNode.attribs.id === 'widget-image-placeholder') {
+				return (
+					<Image src={widget} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
+					/>
+				);
+			}
+			if (domNode.attribs && domNode.attribs.id === 'scroll-image-placeholder') {
+				return (
+					<Image src={scroll} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
+					/>
+				);
+			}
 			if (domNode.attribs && domNode.attribs.id === 'conversion-image-placeholder') {
 				return (
-					<Image
-						src={conversion}
-						alt="Conversion graph"
-						className="figure-img img-fluid shadow-sm"
+					<Image src={conversion} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
 					/>
 				);
 			}
 			if (domNode.attribs && domNode.attribs.id === 'dash-image-placeholder') {
 				return (
-					<Image
-						src={dash}
-						alt="Conversion graph"
-						className="figure-img img-fluid shadow-sm"
+					<Image src={dash} alt="Dashboard graph" className="figure-img img-fluid shadow-sm"
 					/>
+				);
+			}
+			if (domNode.type === 'text' && domNode.data.includes('[angle-right]')) {
+				return (
+					<FontAwesomeIcon icon={faAngleRight} />
 				);
 			}
 		}
@@ -65,12 +75,38 @@ export const ProjectsPage = ({ title, subhead, content, image, image2, lead, ski
 			<dl className="row article-byline">
 				<dt className="col-sm-2 text-muted">Context</dt>
 				<dd className="col-sm-9">{context}</dd></dl>
+			<dl className="row article-byline">
+				<dt className="col-sm-2 text-muted">Teams</dt>
+				<dd className="col-sm-9">{teams}</dd></dl>
 			<p className="lead">
 				{lead}
 			</p>
 			<hr />
 			<div className="mb-5">
-				<p>{parse(content, options)}</p></div ></div>
+				<ReactMarkdown>{content}</ReactMarkdown>
+				{/* <ReactMarkdown 
+                components={{
+                    // Custom rendering for links
+                    a: ({node, ...props}) => <a {...props} style={{ color: 'blue' }} />,
+                }}
+            >
+                {projectspage2.content}
+            </ReactMarkdown> */}
+				{/* {typeof content === 'string' && content.length > 0 ? (
+					parse(content, options) // Directly parse the entire content
+				) : (
+					<p>No content available.</p>
+				)} */}
+				{/* {typeof content === 'string' && content.length > 0 ? (
+					content.split('\n').map((value, index) => (
+						value.trim() ? ( // Only render non-empty paragraphs
+							<p key={index}>{parse(value, options)}</p> // Parse HTML if present
+						) : null
+					))
+				) : (
+					<p>No content available.</p>
+				)} */}
+			</div ></div>
 
 	);
 }
