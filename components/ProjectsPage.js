@@ -23,30 +23,30 @@ export const BreadCrumb = ({ text, link }) => {
 export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused = [], context }) => {
 	const options = {
 		replace: (domNode) => {
-			if (domNode.attribs && domNode.attribs.id === 'widget-image-placeholder') {
-				return (
-					<Image src={widget} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
-					/>
-				);
-			}
-			if (domNode.attribs && domNode.attribs.id === 'scroll-image-placeholder') {
-				return (
-					<Image src={scroll} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
-					/>
-				);
-			}
-			if (domNode.attribs && domNode.attribs.id === 'conversion-image-placeholder') {
-				return (
-					<Image src={conversion} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
-					/>
-				);
-			}
-			if (domNode.attribs && domNode.attribs.id === 'dash-image-placeholder') {
-				return (
-					<Image src={dash} alt="Dashboard graph" className="figure-img img-fluid shadow-sm"
-					/>
-				);
-			}
+			// if (domNode.attribs && domNode.attribs.id === 'widget-image-placeholder') {
+			// 	return (
+			// 		<Image src={widget} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
+			// 		/>
+			// 	);
+			// }
+			// if (domNode.attribs && domNode.attribs.id === 'scroll-image-placeholder') {
+			// 	return (
+			// 		<Image src={scroll} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
+			// 		/>
+			// 	);
+			// }
+			// if (domNode.attribs && domNode.attribs.id === 'conversion-image-placeholder') {
+			// 	return (
+			// 		<Image src={conversion} alt="Conversion graph" className="figure-img img-fluid shadow-sm"
+			// 		/>
+			// 	);
+			// }
+			// if (domNode.attribs && domNode.attribs.id === 'dash-image-placeholder') {
+			// 	return (
+			// 		<Image src={dash} alt="Dashboard graph" className="figure-img img-fluid shadow-sm"
+			// 		/>
+			// 	);
+			// }
 			if (domNode.type === 'text' && domNode.data.includes('[angle-right]')) {
 				return (
 					<FontAwesomeIcon icon={faAngleRight} />
@@ -83,7 +83,7 @@ export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused 
 			</p>
 			<hr />
 			<div className="mb-5">
-				<ReactMarkdown>{content}</ReactMarkdown>
+				{/* <ReactMarkdown>{content}</ReactMarkdown> */}
 				{/* <ReactMarkdown 
                 components={{
                     // Custom rendering for links
@@ -92,11 +92,11 @@ export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused 
             >
                 {projectspage2.content}
             </ReactMarkdown> */}
-				{/* {typeof content === 'string' && content.length > 0 ? (
+				{typeof content === 'string' && content.length > 0 ? (
 					parse(content, options) // Directly parse the entire content
 				) : (
 					<p>No content available.</p>
-				)} */}
+				)}
 				{/* {typeof content === 'string' && content.length > 0 ? (
 					content.split('\n').map((value, index) => (
 						value.trim() ? ( // Only render non-empty paragraphs
