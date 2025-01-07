@@ -17,6 +17,7 @@
     "export": "next export",
     "predeploy": "npm run build && npm run export && touch ./out/.nojekyll",
     "deploy": "npm run custom-domain && node scripts/pages.js krista-lowry main",
+    "custom-domain": "node scripts/cname.js krista-lowry.com www.krista-lowry.com",
     "lint": "next lint"
   },
   "dependencies": {
