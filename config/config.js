@@ -11,11 +11,11 @@ export const navigation = {
   links: [
     {
       title: "About",
-      link: "/",
+      link: "/home",
     },
     {
       title: "Projects",
-      link: "/portfolio-homepage",
+      link: "/home/portfolio-homepage",
     },
   ],
 }

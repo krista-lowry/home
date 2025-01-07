@@ -3,7 +3,7 @@ const build_path = './out';
 
 const args = process.argv.slice(2);
 const username = args[0];
-const repoURL = `https://krista-lowry.github.io/home/`;
+const repoURL = `https://github.com/krista-lowry/home.git`;
 const branch = args[1];
 
 console.log(`Deploying to ${repoURL} branch ${branch}`);
