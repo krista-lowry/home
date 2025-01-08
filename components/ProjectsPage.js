@@ -1,6 +1,7 @@
 import React from 'react';
 import getConfig from 'next/config'
 import Link from 'next/link'
+import { Tabs, Tab } from 'react-bootstrap';
 import Image from 'next/image';
 // import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +21,7 @@ export const BreadCrumb = ({ text, link }) => {
 	);
 }
 
-export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused = [], context }) => {
+export const ProjectsPage = ({ title, subhead, project_images, content, lead, teams, skillsused = [], context }) => {
 	const options = {
 		replace: (domNode) => {
 			// if (domNode.attribs && domNode.attribs.id === 'widget-image-placeholder') {
@@ -89,54 +90,44 @@ export const ProjectsPage = ({ title, subhead, content, lead, teams, skillsused 
 				) : (
 					<p>No content available.</p>
 				)}
-			</div></div>
+			</div>
+			<Tabs defaultActiveKey="tab0" id="image-tabs" className="mb-3">
+				{project_images?.map((image, index) => (
+					<Tab
+						key={index}
+						eventKey={`tab${index}`}
+						title={image.tabName || `Variant ${index + 1}`}
+					>
+						<div className="v-img my-6 mx-6">
+							<img
+								src={image.url || image}
+								style={{ maxHeight: '500px' }}
+								className="v_img" // Adjust as needed
+							/>
+						</div>
+					</Tab>
+				))}
+			</Tabs>
+			{/* <Tabs defaultActiveKey="tab0" id="image-tabs" className="mb-3">
+				{project_images?.map((image, index) => (
+					<Tab key={index} eventKey={`tab${index}`} title={`Variant ${index + 1}`}>
+						<div className="v-img my-6 mx-6">
+							<Zoom>
+								<img src={image}
+									style={{ maxHeight: '500px' }}
+									className="v_img" // Adjust as needed
+								/>
+							</Zoom>
+						</div>
+					</Tab>
+
+				))}
+			</Tabs> */}
+
+		</div>
 
 	);
 }
-
-// export const Work = ({ title, summary, cards }) => {
-// 	return (
-// 		<div id="work" className="bg-secondary py-5 px-5">
-// 			<div className="container mr-5">
-// 				<h1 className="text-primary fw-bold">{title}</h1>
-// 				{/* Description Section */}
-// 				<p className="lead text-dark mr-150">{summary}</p>
-// 			</div>
-// 			<div className="d-flex flex-row flex-wrap justify-content-center">
-// 				{cards.map((value, index) => (
-// 					<Card
-// 						key={index}
-// 						title={value.title}
-// 						description={value.description}
-// 						icons={value.icons} />
-// 				))}
-// 			</div>
-// 			{/* <div className="text-center">
-// 					<button type="button" className="btn btn-outline-light">See More</button>
-// 				</div> */}
-// 			{/* </div> */}
-// 		</div>
-// 	);
-// }
-
-
-// export const Card = ({title, description, icons}) => {
-// 	return (
-// 		<div className="card py-3 px-3 mx-sm-4 my-4 card-work" style={{ width: "20rem" }}>
-// 			<h4 className="text-primary">{title}</h4>
-// 			<p className="text-dark">{description}</p>
-// 			<div className="text-end">
-// 				{icons && icons.map((value, index) => (
-// 					<Link key={index} href={value.link}>
-// 						<a target="_blank" rel="noreferrer">
-// 							<FontAwesomeIcon className="icon-style mx-1" icon={value.icon} size="2x" />
-// 						</a>
-// 					</Link>
-// 				))}
-// 			</div>
-// 		</div>
-// 	);
-// }
 
 const icons = [
 	{ icon: faGithub, link: "https://github.com", text: "GitHub" },

@@ -3,7 +3,7 @@ import { Nav } from '../components/Navbar.js';
 import { Intro, About } from '../components/Intro.js';
 import { ProjectsPage } from '../components/ProjectsPage.js';
 import { Footer, Contact } from '../components/Footer.js';
-import { about, contact, intro, navigation, projects, SEO, icons, work, skills, projectspage, projectspage2, skillsused } from '../config/config.js';
+import { about, contact, intro, navigation, projects, SEO, icons, work, skills, projectspage, funnelcro, skillsused } from '../config/config.js';
 import { Header } from '../components/Header.js';
 
 export default function Home() {
@@ -15,15 +15,14 @@ export default function Home() {
         links={navigation.links}
       />
       <ProjectsPage
-        title={projectspage2.title}
-        lead={projectspage2.lead}
-        subhead={projectspage2.subhead}
-        content={projectspage2.content}
-        // image={projectspage.image}
-        // image2={projectspage.image2}
-        skillsused={projectspage2.skillsused}
-        context={projectspage2.context}
-        teams={projectspage2.teams}
+        title={funnelcro.title}
+        lead={funnelcro.lead}
+        subhead={funnelcro.subhead}
+        content={funnelcro.content}
+        skillsused={funnelcro.skillsused}
+        context={funnelcro.context}
+        teams={funnelcro.teams}
+        project_images={funnelcro.project_images}
       />
       <Footer />
     </Fragment>
