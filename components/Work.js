@@ -126,18 +126,25 @@ export const Card = ({ title, description, icons, buttonLabel, onButtonClick, ti
 				</a>
 			</h4>
 			<p className="text-dark">{description}</p>
-			{/* Icons Section */}
-			<div className="d-flex justify-content-around">
-				{icons &&
-					icons.map((value, index) => (
-						<Link key={index} href={value.link}>
-							<a target="_blank" rel="noreferrer" className="text-center">
-								<FontAwesomeIcon className="icon-style" icon={value.icon} size="2x" />
-								<div className="mt-1 small">{value.text}</div>
-							</a>
-						</Link>
-					))}
-			</div>
-		</div>
+			<a href={titleLink} className='btn btn-outline-primary my-1 mx-3 mb-3'>Read more</a>
+			{icons && icons.length > 0 && (
+				<div className="d-flex justify-content-around">
+					<ul className="list-group list-group-horizontal">
+						<li className="list-group-item"><small className="text-muted">Jump to</small></li>
+						{icons.map((value, index) => (
+							<Link key={index} href={value.link}>
+								<li className="list-group-item">
+									<a target="_blank" rel="noreferrer" className="text-center">
+										<FontAwesomeIcon className="icon-style" icon={value.icon} />
+										<small> {value.text}</small>
+									</a>
+								</li>
+							</Link>
+						))}
+					</ul>
+				</div>
+			)}
+
+		</div >
 	);
 };

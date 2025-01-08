@@ -152,7 +152,7 @@ export const funnelcro = {
     "CRO best practices",
   ],
   context: "In-house project",
-  teams: "User Research, Stakeholders, Optimization",
+  teams: "User Research, Stakeholders, Optimization, Front-end Development",
   lead: "",
 }
 
@@ -168,7 +168,20 @@ export const da_logistic_reg = {
     "Bagged Decision Tree",
     "Knn"
   ],
-  context: "course",
+  icons: [
+    {
+      icon: faChartSimple,
+      link: "https://public.tableau.com/app/profile/krista.lowry/viz/OnlineShopperIntent-TableauDash/Performance",
+      text: "Tableau"
+    },
+    {
+      icon: faCode,
+      link: "https://github.com/krista-lowry/data-analysis/blob/main/r-code-markdown.ipynb",
+      text: "R code"
+    },
+  ],
+  context: "Coursework from UW PCE Certificate",
+  teams: "Solo Final Project",
   lead: "This project showcases my ability to perform in-depth data analysis using R code, transform findings into visualizations in Tableau, and offer data-driven recommendations to optimize marketing and CRO strategies.",
 }
 
@@ -184,37 +197,25 @@ export const work = {
     {
       title: da_logistic_reg.title,
       // title: "Identifying User Segments and Predicting Conversions",
-      // titleLink: "/project-predict-uw",
+      titleLink: "/project-predict-uw",
       description: "This project showcases my ability to perform in-depth data analysis using R code, transform findings into visualizations in Tableau, and offer data-driven recommendations to optimize marketing and CRO strategies.",
       icons: [
-        {
-          icon: faCode,
-          link: "https://github.com/krista-lowry/data-analysis/blob/main/r-code-markdown.ipynb",
-          text: "R code"
-        },
         {
           icon: faChartSimple,
           link: "https://public.tableau.com/app/profile/krista.lowry/viz/OnlineShopperIntent-TableauDash/Performance",
           text: "Tableau"
         },
         {
-          icon: faGithub,
-          link: "https://krista-lowry.github.io/data-analysis/",
-          text: "GitHub"
+          icon: faCode,
+          link: "https://github.com/krista-lowry/data-analysis/blob/main/r-code-markdown.ipynb",
+          text: "R code"
         },
       ],
     },
     {
       title: "Funnel Conversion Rate Optimization and A/B testing",
-      description: "In this case study, I leveraged data-driven optimization techniques to improve our product's performance. Through comprehensive funnel analysis, I identified conversion bottlenecks and developed hypotheses for improvement.",
-      // titleLink: "/project-funnel-cro",
-      icons: [
-        {
-          icon: faGithub,
-          link: "https://krista-lowry.github.io/funnel-cro/",
-          text: "GitHub"
-        },
-      ],
+      description: "This case study walks through the process of identifying an optimization opportunity through funnel analysis and UX research, to designing and executing an A/B test and providing recommendations on further iterations.",
+      titleLink: "/project-funnel-cro",
     }
   ],
 }

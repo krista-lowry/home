@@ -19,10 +19,12 @@ export default function Home() {
         lead={da_logistic_reg.lead}
         subhead={da_logistic_reg.subhead}
         content={da_logistic_reg.content}
+        icons={da_logistic_reg.icons}
         // image={da_logistic_reg.image}
         // image2={da_logistic_reg.image2}
         skillsused={da_logistic_reg.skillsused}
         context={da_logistic_reg.context}
+        teams={da_logistic_reg.teams}
       />
       <Footer />
     </Fragment>

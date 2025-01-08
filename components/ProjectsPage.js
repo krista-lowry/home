@@ -21,7 +21,7 @@ export const BreadCrumb = ({ text, link }) => {
 	);
 }
 
-export const ProjectsPage = ({ title, subhead, project_images, content, lead, teams, skillsused = [], context }) => {
+export const ProjectsPage = ({ icons, title, subhead, project_images, content, lead, teams, skillsused = [], context }) => {
 	const options = {
 		replace: (domNode) => {
 			// if (domNode.attribs && domNode.attribs.id === 'widget-image-placeholder') {
@@ -80,9 +80,27 @@ export const ProjectsPage = ({ title, subhead, project_images, content, lead, te
 			<dl className="row article-byline">
 				<dt className="col-sm-2 text-muted">Teams</dt>
 				<dd className="col-sm-9">{teams}</dd></dl>
+			{icons && icons.length > 0 && (
+				// <div className="d-flex justify-content-around">
+				<ul className="list-group list-group-horizontal mb-3">
+					<li className="list-group-item"><small className="text-muted">Jump to</small></li>
+					{icons.map((value, index) => (
+						<Link key={index} href={value.link}>
+							<li className="list-group-item">
+								<a target="_blank" rel="noreferrer" className="text-center">
+									<FontAwesomeIcon className="icon-style" icon={value.icon} />
+									<small> {value.text}</small>
+								</a>
+							</li>
+						</Link>
+					))}
+				</ul>
+				// </div>
+			)}
 			<p className="lead">
 				{lead}
 			</p>
+
 			<hr />
 			<div className="mb-5">
 				{typeof content === 'string' && content.length > 0 ? (
@@ -91,7 +109,16 @@ export const ProjectsPage = ({ title, subhead, project_images, content, lead, te
 					<p>No content available.</p>
 				)}
 			</div>
-			<Tabs defaultActiveKey="tab0" id="image-tabs" className="mb-3">
+			<div className="text-left mb-3">
+				<Link href="/portfolio-homepage" className="text-dark mx-3" role="button">
+					<div>
+						<button type="button" className="btn btn-outline-light text-light">
+							<FontAwesomeIcon icon={faArrowLeft} size="1x" />
+							All projects
+						</button>	</div></Link>
+			</div>
+
+			{/* <Tabs defaultActiveKey="tab0" id="image-tabs" className="mb-3">
 				{project_images?.map((image, index) => (
 					<Tab
 						key={index}
@@ -107,22 +134,8 @@ export const ProjectsPage = ({ title, subhead, project_images, content, lead, te
 						</div>
 					</Tab>
 				))}
-			</Tabs>
-			{/* <Tabs defaultActiveKey="tab0" id="image-tabs" className="mb-3">
-				{project_images?.map((image, index) => (
-					<Tab key={index} eventKey={`tab${index}`} title={`Variant ${index + 1}`}>
-						<div className="v-img my-6 mx-6">
-							<Zoom>
-								<img src={image}
-									style={{ maxHeight: '500px' }}
-									className="v_img" // Adjust as needed
-								/>
-							</Zoom>
-						</div>
-					</Tab>
-
-				))}
 			</Tabs> */}
+
 
 		</div>
 
