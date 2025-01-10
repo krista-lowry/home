@@ -73,7 +73,9 @@ export const Work = ({ title, summary, cards, icons }) => {
 			<div className="container mr-5">
 				<h1 className="text-primary fw-bold">{title}</h1>
 				{/* Description Section */}
-				<p className="lead text-dark mr-150">{summary}</p>
+				<p className="lead text-dark mr-150">{summary} <Link href="/">
+					<small className="ml-3 text-primary">
+						Contact me on LinkedIn. </small></Link></p>
 			</div>
 			<div className="d-flex flex-row flex-wrap justify-content-center">
 				{cards.map((value, index) => (

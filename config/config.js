@@ -1,5 +1,6 @@
 
 import profile from './profile.png';
+import { aboutme_content } from '../config/aboutme.js';
 import { funnelcro_content } from '../config/funnelcro.js';
 import { da_logistic_reg_content } from '../config/da_logistic_reg.js';
 import { faAppStore, faGithub, faGooglePlay, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -71,7 +72,7 @@ export const navigation = {
   links: [
     {
       title: "About",
-      link: "/",
+      link: "/aboutme"
     },
     {
       title: "Projects",
@@ -106,9 +107,10 @@ export const intro = {
 
 export const about = {
   title: "Welcome to My Portfolio!",
-  description: [
-    "I am a curious, driven analytics professional with 10 years experience building and optimizing digital products and marketing strategies through in-depth analysis, creative problem-solving, and efficient collaboration.",
-    "My toolkit includes SQL, Tableau, R, and a breadth of web analytics technologies from tag management to heatmap software. I am a lifelong and eager learner, continually pursuing new courses and certifications to expand my skillset."]
+  description:
+    `<p>I could use catchphrases like passionate, driven, curious, strategic - and they are all accurate - but they cloud the simple facts of who I am and what drives me. So, instead, I'll summarize in one sentence:</p>
+    <div class="card my-4 lead shadow-sm p-3 bg-body rounded">
+    <div className="card-body">I take serious ownership over every product I work with, and I am obsessed about knowledge.</div></div>`
   ,
   skills: [
     "Tableau",
@@ -128,7 +130,11 @@ export const about = {
   ]
 }
 
-
+export const aboutme = {
+  title: "My Core Tenents",
+  content: aboutme_content.content,
+  lead: "I take serious ownership over every product I work with, and I am obsessed about knowledge",
+}
 
 export const funnelcro = {
   title: "Funnel Conversion Rate Optimization and A/B Testing",
@@ -151,8 +157,8 @@ export const funnelcro = {
     "A/B testing",
     "CRO best practices",
   ],
-  context: "In-house project",
-  teams: "User Research, Stakeholders, Optimization, Front-end Development",
+  context: ["In-house project"],
+  teams: ["User Research, Stakeholders, Optimization, Front-end Development"],
   lead: "",
 }
 
@@ -192,7 +198,7 @@ export const breadcrumb = {
 
 export const work = {
   title: "Projects",
-  summary: "Here you will find recent projects showcasing my technical and business acumen in data anaylsis, data visualization, strategic planning, and experiment design.",
+  summary: "I've put together a few recent projects showcasing my technical and business acumen in data anaylsis, data visualization, strategic planning, and experiment design. I'm continually adding more: if you're curious about what else I have worked on, please reach out!",
   cards: [
     {
       title: da_logistic_reg.title,

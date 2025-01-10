@@ -8,7 +8,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const parse = require('html-react-parser').default;
 const { publicRuntimeConfig } = getConfig()
 
-export const Intro = ({ title, description, options, image, buttons, icons, jobTitle }) => {
+export const Intro = ({ title, description, image, buttons, icons, jobTitle }) => {
 	return (
 		<div className="bg-secondary py-5 px-5">
 			<div className="container">
@@ -25,7 +25,7 @@ export const Intro = ({ title, description, options, image, buttons, icons, jobT
 
 						<h1 className="text-primary fw-bold display-3">{title}</h1>
 						<p> {typeof description === 'string' && description.length > 0 ? (
-							parse(description, options) // Directly parse the entire content
+							parse(description) // Directly parse the entire content
 						) : (
 							<p>No content available.</p>
 						)}</p>
@@ -75,28 +75,25 @@ export const Intro = ({ title, description, options, image, buttons, icons, jobT
 	);
 }
 
-export const About = ({ title, description = [], skills = [] }) => {
+export const About = ({ title, description, skills = [] }) => {
 	return (
 		<div id="about" className="bg-white py-5 px-5">
 			<div className="container">
 				<h1 className="text-primary fw-bold">{title}</h1>
-				<div className="row">
+				<div className="row gx-5">
 					{/* Description Section */}
-					<div className="col-md-6">
+					<div className="col-md-7 mb-5 mt-3">
 						<div className="px-sm-1">
-							{description.length > 0 ? (
-								description.map((value, index) => (
-									<p key={index}>{value}</p>
-								))
+							{typeof description === 'string' && description.length > 0 ? (
+								<>{parse(description)}</> // Wrap in Fragment if parse returns multiple elements
 							) : (
 								<p>No description available.</p>
 							)}
 						</div>
-					</div>
+						<div className="text-center text-primary"><Link href="/aboutme">Read More About Me</Link></div> </div>
 
-					{/* Skills Section as Tag Cloud */}
-					<div className="col-md-6">
-						{/* <h5 className="text-dark">Toolkit</h5> */}
+					<div className="col-md-5 mt-3">
+						<h5 className="text-light text-center">My Toolkit</h5>
 						<div className="d-flex flex-wrap">
 							{skills.length > 0 ? (
 								skills.map((skill, index) => (
@@ -110,8 +107,8 @@ export const About = ({ title, description = [], skills = [] }) => {
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</div >
+		</div >
 	);
 }
 
