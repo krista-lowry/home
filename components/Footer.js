@@ -9,7 +9,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 export const Contact = ({ title, description, buttons }) => {
 	return (
 		<div id="contact" className="bg-white py-5 px-5">
-			<div className="container">
+			<div className="container-md align-center">
 				<h1 className="text-primary fw-bold">{title}</h1>
 				<div className="px-sm-5">
 					<p>{description}</p>

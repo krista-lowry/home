@@ -56,7 +56,7 @@ export const ProjectsPage = ({ icons, title, subhead, project_images, content, l
 		}
 	};
 	return (
-		<div className="small-middle-container mt-5">
+		<div className="container-sm">
 			<div className="text-left mb-3">
 				<Link href="/portfolio-homepage" className="text-dark mx-3" role="button">
 					<div>

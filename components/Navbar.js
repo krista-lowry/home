@@ -9,7 +9,7 @@ export const Nav = ({ title, links }) => {
 
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-secondary">
-      <div className="container">
+      <div className="container-sm">
         <Link href="/">
           {/* <Image src={Logo} alt="Logo" width="36" height="36" className="vertical-align-middle" /> */}
           <a className="navbar-brand">

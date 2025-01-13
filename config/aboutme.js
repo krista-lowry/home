@@ -16,7 +16,7 @@ export const aboutme_content = {
     <h4 class="blockquote text-primary">Collaborative and Process-Oriented</h4>
 		<p>Collaboration is essential. I love planning around group work, and streamlining the innovation process.</p>
 		<p>I see two prongs to productive collaboration:</p>
-		<ol><li>Essential for innovation: Creativity is born from the unknown. When groups of passionate people come together, novel ideas form more quickly and freely.</li><li>Requires organization: The second importnat piece to productive collaborating is organizing these ideas and putting together action plans. <strong>I thrive in planning mode</strong>, and am often the note-taker and scheduler: turning creative ideas in defined project roadmaps and orchestrating streamlined processes to get our to-do list completed.</ol></p>
+		<ol><li>Essential for innovation: Creativity is born from the unknown. When groups of passionate people come together, novel ideas form more quickly and freely.</li><li>Requires organization: The second important piece to productive collaborating is organizing these ideas and putting together action plans. <strong>I thrive in planning mode</strong>, and am often the note-taker and scheduler: turning creative ideas in defined project roadmaps and orchestrating streamlined processes to get our to-do list completed.</ol></p>
 		<h1 className ="mt-5">Education</h1>
 		<p className="lead">I am a lifelong and eager learner, continually pursuing new courses and certifications to expand my skillset.</p>
 		<hr/>

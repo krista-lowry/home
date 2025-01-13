@@ -43,7 +43,7 @@ import { faAppStore, faGithub, faGooglePlay, faLinkedin } from '@fortawesome/fre
 export const Certificates = ({ title, summary, cards, icons }) => {
 	return (
 		<div id="work" className="bg-white py-5 px-5">
-			<div className="container mr-5">
+			<div className="container-lg mr-5">
 				<h1 className="text-primary fw-bold">{title}</h1>
 				{/* Description Section */}
 				<p className="lead text-dark mr-150">{summary}</p>
@@ -70,7 +70,7 @@ export const Certificates = ({ title, summary, cards, icons }) => {
 export const Work = ({ title, summary, cards, icons }) => {
 	return (
 		<div id="work" className="bg-secondary py-5 px-5">
-			<div className="container mr-5">
+			<div className="container-lg mr-5">
 				<h1 className="text-primary fw-bold">{title}</h1>
 				{/* Description Section */}
 				<p className="lead text-dark mr-150">{summary} <Link href="/">

@@ -32,7 +32,11 @@ $badge-font-size: .75em;
 $badge-padding-y: .35em;
 $badge-padding-x: .65em;
 $badge-margin-right: 1em;
-
+$container-max-widths: (
+  sm: 540px,
+  md: 600px,
+  // lg: 960px,
+);
 // font 
 // Title
 // font-family: Barlow;
@@ -120,10 +124,12 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 .small-middle-container {
-  margin: auto;
-  max-width: 100% !important;
-  width: 40%;
+  margin: 25px;
+  max-width: 468px !important;
+  // width: auto;
 }
 
 .v_img {
