@@ -131,7 +131,7 @@ export const about = {
 }
 
 export const aboutme = {
-  title: "My Core Tenents",
+  title: "My Core Tenets",
   content: aboutme_content.content,
   lead: "I take serious ownership over every product I work with, and I am obsessed about knowledge",
 }
