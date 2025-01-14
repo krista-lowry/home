@@ -56,16 +56,15 @@ export const ProjectsPage = ({ icons, title, subhead, project_images, content, l
 		}
 	};
 	return (
-		<div className="container-sm">
-			<div className="text-left mb-3">
+		<div className="container-sm fluid">
+			<div className="text-left mb-3 mt-3">
 				<Link href="/portfolio-homepage" className="text-dark mx-3" role="button">
 					<div>
 						<button type="button" className="btn btn-outline-light text-light">
-							<FontAwesomeIcon icon={faArrowLeft} size="1x" />
-							All projects
+							<FontAwesomeIcon icon={faArrowLeft} size="1x" />    All projects
 						</button>	</div></Link>
 			</div>
-			<h1 className="mb-4">{title}</h1>
+			<h1 className="mb-4 mt-5">{title}</h1>
 			<dl className="row article-byline">
 				<dt className="col-sm-2 text-muted">Skills used</dt>
 				<dd className="col-sm-9">
@@ -113,8 +112,7 @@ export const ProjectsPage = ({ icons, title, subhead, project_images, content, l
 				<Link href="/portfolio-homepage" className="text-dark mx-3" role="button">
 					<div>
 						<button type="button" className="btn btn-outline-light text-light">
-							<FontAwesomeIcon icon={faArrowLeft} size="1x" />
-							All projects
+							<FontAwesomeIcon icon={faArrowLeft} size="1x" />   All projects
 						</button>	</div></Link>
 			</div>
 
