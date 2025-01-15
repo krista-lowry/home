@@ -32,6 +32,7 @@ $badge-font-size: .75em;
 $badge-padding-y: .35em;
 $badge-padding-x: .65em;
 $badge-margin-right: 1em;
+
 $container-max-widths: (
   sm: 450px,
   md: 600px,
@@ -73,6 +74,13 @@ $container-max-widths: (
 // font-size: 15px;
 // line-height: 18px;
 
+.lead {
+  margin-bottom: 25px;
+}
+
+.blockquote {
+  margin-top: 50px;
+}
 
 
 // 3. Include remainder of required Bootstrap stylesheets

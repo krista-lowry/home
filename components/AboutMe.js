@@ -32,7 +32,7 @@ export const AboutMe = ({ icons, title, subhead, project_images, content, lead, 
 		}
 	};
 	return (
-		<div className="container-sm fluid">
+		<div className="container-sm">
 
 			<h1 className="mb-4 mt-5">{title}</h1>
 

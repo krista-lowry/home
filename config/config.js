@@ -106,11 +106,11 @@ export const intro = {
 
 
 export const about = {
-  title: "Welcome to My Portfolio!",
+  // title: "About Me",
   description:
-    `<p>I could use catchphrases like passionate, driven, curious, strategic - and they are all accurate - but they cloud the simple facts of who I am and what drives me. So, instead, I'll summarize in one sentence:</p>
-    <div class="card my-4 lead shadow-sm p-3 bg-body rounded">
-    <div className="card-body">I take serious ownership over every product I work with, and I am obsessed about knowledge.</div></div>`
+    ` <div class="card my-4 lead shadow-sm p-3 bg-body rounded">
+    <div className="card-body"><div className="mb-3">I take serious ownership over every initiative, and I am obsessed about knowledge.</div>
+    <div><small>My specialties: A/B Testing & Conversion Optimization, Strategic & Process-Oriented Approach, Reporting & Data Visualization</small></div></div>`
   ,
   skills: [
     "Tableau",
