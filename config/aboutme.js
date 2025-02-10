@@ -7,14 +7,17 @@ import Image from "next/image";
 
 export const aboutme_content = {
 	content: `
-    <h4 class="blockquote text-primary">Creative and Persistent</h4>
-		<p>I love using creativity and logic to solve problems and gain deep knowledge about why and how something is working or not working.</p>
-		<p><strong>I am obsessed over getting it done, knowing why, and understanding how</strong> - to such an extent that I will teach myself a new coding language or statistical model or third-party application so that I can answer the question, offer ideas, and propose solutions.</p>		
-    <h4 class="blockquote text-primary">Collaborative and Process-Oriented</h4>
-		<p> I love planning around group work, and streamlining the innovation process. <strong>I thrive in planning mode</strong>, and am often the note-taker and scheduler: turning creative ideas in defined project roadmaps and orchestrating streamlined processes to get our to-do list completed.</p>
-		<hr/>
+  <h4 class="blockquote text-primary">Persistent Curiosity</h4> 
+	<ol><p><strong>I am obsessed over getting it done, knowing why, and understanding how</strong> - to such an extent that I will teach myself a new coding language or statistical model or third-party application so that I can answer the question, offer ideas, and discover solutions.</p>		</ol>	
+	<h4 class="blockquote text-primary">Driven Ownership</h4>
+		<ol><strong>I thrive in planning mode</strong>: turning creative ideas in project roadmaps and orchestrating streamlined processes to achieve greater impact and user experience improvement.</p>
+		<p><strong>I deliver on my commitments.</strong> If something needs done, I get it done, and get it done well.</p></ol>		
+		<h4 class="blockquote text-primary">Empathic Collaboration</h4>
+		<ol><p><strong>Real connection</strong> fosters greater productivity and innovative solutions. I believe in empathic communication and fostering a connected and safe team environment.</p>
+		</ol>
+		<hr>
 		<h1 className ="mt-5 mb-3">Education</h1>
-		<p className="lead">I am a lifelong and eager learner, continually pursuing new courses and certifications to expand my skillset.</p>
+		<ol><p className="lead">I am a lifelong and eager learner, continually pursuing new courses and certifications to expand my skillset.</p></ol>
 		<div class="row">
 		<div class="col-sm-6">
 		<div class="card-body my-4 shadow-sm p-3 bg-body rounded">
